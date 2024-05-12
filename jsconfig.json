@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./*"],
+            "@database": ["./prisma/index.js"],
+            "@service/*": ["./src/*"],
+        }
+    }
+}

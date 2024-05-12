@@ -1,22 +1,31 @@
 {
   "name": "robux-bot",
   "version": "1.0.0",
-  "description": "Mania Robux bot made by ziad",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "node .",
+    "watch": "node --watch .",
+    "postinstall": "npx prisma generate"
   },
-  "keywords": [
-    "Robux",
-    "bot"
-  ],
-  "author": "Ziath#1768 <zemad3040@gmail.com>",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.9.0",
-    "dotenv": "^16.0.3",
-    "handler.djs": "^1.6.8",
-    "mongoose": "^7.0.4",
-    "noblox.js": "^4.14.1"
+    "@prisma/client": "^5.13.0",
+    "discord.js": "^14.15.2",
+    "handler.djs": "^2.6.38",
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0",
+    "prisma": "^5.13.0"
+  },
+  "_moduleAliases": {
+    "@": ".",
+    "@database": "./prisma/index.js",
+    "@service": "./src/intervals"
   }
 }

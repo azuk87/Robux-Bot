@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id                      String  @id @map("_id")
+  guildId                 String  
+  balance                 Int     @default(0)
+  blacklist               Boolean @default(false)
+  buyTotal                Int     @default(0)
+  buyedCount              Int     @default(0)
+  transactionsTotal       Int     @default(0)
+  transactionsCount       Int     @default(0)
+  lastTransactionsAccount String?
+}
+
+model Guilds {
+  id            String  @id @map("_id")
+  prefix        String  @default("!")
+  group         Int?
+  recipient     String?
+  price         Int     @default(1000)
+  proofsChannel String?
+  thxChannel    String?
+  thxEmoji      String?
+  codesChannel  String?
+  logsChannel   String?
+  clientsRole   String?
+  buy           Status
+  transfer      Status
+}
+
+type Status {
+  min    Int     @default(1)
+  max    Int     @default(1000)
+  status Boolean @default(true)
+}
