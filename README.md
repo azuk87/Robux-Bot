@@ -6,6 +6,13 @@
 - proofchannel
 - thxchannel
 - verification
+- validations
+- server
+- test
+- error-handler
+- more-cache
+- vercel support
+- gui
 
 + ids cache
 ```
