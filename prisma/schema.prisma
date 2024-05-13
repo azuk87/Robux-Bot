@@ -9,7 +9,7 @@ datasource db {
 
 model Users {
   id                      String  @id @map("_id")
-  guildId                 String  
+  guildId                 String
   balance                 Int     @default(0)
   blacklist               Boolean @default(false)
   buyTotal                Int     @default(0)
@@ -22,6 +22,7 @@ model Users {
 model Guilds {
   id            String  @id @map("_id")
   prefix        String  @default("!")
+  cookie        String?
   group         Int?
   recipient     String?
   price         Int     @default(1000)

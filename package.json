@@ -15,7 +15,8 @@
     "@prisma/client": "^5.13.0",
     "discord.js": "^14.15.2",
     "handler.djs": "^2.6.38",
-    "module-alias": "^2.2.3"
+    "module-alias": "^2.2.3",
+    "noblox.js": "^4.15.1"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",

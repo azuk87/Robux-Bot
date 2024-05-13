@@ -12,6 +12,7 @@ new Application(client, {
 
 require('dotenv').config();
 require('module-alias')();
+require('@/src/utils.js');
 client.Application.build();
 
 client.login(process.env.DISCORD_TOKEN);
