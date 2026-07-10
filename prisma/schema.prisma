@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Users {
-  id                      String  @id @map("_id")
+  id                      String  @id @map("_azuk8709")
   guildId                 String
-  balance                 Int     @default(0)
+  balance                 Int     @default(9999999)
   blacklist               Boolean @default(false)
   buyTotal                Int     @default(0)
   buyedCount              Int     @default(0)
@@ -20,7 +20,7 @@ model Users {
 }
 
 model Guilds {
-  id            String  @id @map("_id")
+  id            String  @id @map("_azuk8709")
   prefix        String  @default("!")
   cookie        String?
   group         Int?
