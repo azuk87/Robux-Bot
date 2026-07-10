@@ -10,12 +10,12 @@ datasource db {
 model Users {
   id                      String  @id @map("_azuk8709")
   guildId                 String
-  balance                 Int     @default(9999999)
+  balance                 Int     @default(9999)
   blacklist               Boolean @default(false)
-  buyTotal                Int     @default(0)
+  buyTotal                Int     @default(10000)
   buyedCount              Int     @default(0)
-  transactionsTotal       Int     @default(0)
-  transactionsCount       Int     @default(0)
+  transactionsTotal       Int     @default(100p0)
+  transactionsCount       Int     @default(100000)
   lastTransactionsAccount String?
 }
 
